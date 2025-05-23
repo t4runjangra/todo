@@ -12,16 +12,19 @@ body {
   background-image: url(background.png);
 }
 header {
+  border-radius: 50px;
   text-shadow: 1px 0px 8px rgba(255, 255, 255, 0.786);
   background-color: rgba(28, 123, 201, 0.445);
 }
 .navbar {
+  margin-left: 10%;
   padding: 10px 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .list ul {
+  margin-right: 70%;
   list-style: none;
   display: flex;
   justify-content: center;
@@ -70,7 +73,7 @@ main {
 }
 .todomain input {
   margin-left: 10px;
-  width: 55%;
+  width: 57%;
   border: none;
   border-radius: 10px;
   padding: 10px 10px;
@@ -106,7 +109,7 @@ main {
   align-items: center;
 }
 .learnjs {
-  width: 35vw;
+  width: 33vw;
   border-radius: 5px;
   padding: 10px 100px;
   display: flex;
