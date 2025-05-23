@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  list-style: none;
+}
+body {
+  background-size: cover;
+  background-repeat:repeat;
+  background-image: url(background.png);
+}
+header {
+  text-shadow: 1px 0px 8px rgba(255, 255, 255, 0.786);
+  background-color: rgba(28, 123, 201, 0.555);
+}
+.navbar {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.list ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.list a {
+  text-decoration: none;
+  color: black;
+}
+.list a:hover {
+  color: rgb(255, 255, 255);
+}
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bg {
+  display: flex;
+  flex-direction: column;
+  height: 65%;
+  width: 60%;
+  border-radius: 10px;
+  box-shadow: 1px 0px 8px;
+  background-color: rgba(255, 255, 255, 0.149);
+}
+.align {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.align h2 {
+  height: 100%;
+  padding: 10px 0px;
+  text-shadow: 1px 0px 8px rgba(85, 85, 85, 0.534);
+}
+.todomain {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 5px;
+  padding: 15px 0px;
+}
+.todomain input {
+  margin-left: 10px;
+  width: 55%;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  background-color: rgba(54, 54, 54, 0.411);
+  color: rgb(255, 255, 255);
+  box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.105);
+}
+/* .todomain input::content{
+} */
+.todomain input::placeholder {
+  color: white;
+}
+.todomain button {
+  margin-right: 10px;
+  border: none;
+  height: 32px;
+  margin-top:2px;
+  box-shadow: 1px 0px 8px;
+  padding: 0px 20px;
+  color: rgb(2, 1, 1);
+  background-color: rgba(255, 255, 255, 0.411);
+  border-radius: 10px;
+}
+.todomain button:hover {
+  background-color: rgba(28, 123, 201, 0.555);
+  cursor: pointer;
+}
+.task {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.learnjs {
+  width: 35vw;
+  border-radius: 5px;
+  padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(234, 228, 228, 0.808);
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.learnjs input[type="checkbox"] {
+  width: 20px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  position: absolute;
+  left: 8px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.363);
+}
+
+.learnjs input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  left: 5px;
+  width: 6px;
+  height: 10px;
+  border: solid rgba(128, 128, 128, 0);
+  border-width: 0 2px 2px 0;
+  transform: rotate(18deg);
+  display: none;
+}
+.learnjs input:hover {
+  transform: scale(1.2);
+}
+.learnjs input[type="checkbox"]:checked::before {
+  display: block;
+}
