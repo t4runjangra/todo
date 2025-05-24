@@ -104,11 +104,13 @@ main {
 .task {
   height: 100%;
   width: 100%;
+  color: red;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.learnjs {
+.tasklist li {
+  color: aqua;
   width: 33vw;
   border-radius: 5px;
   padding: 10px 100px;
