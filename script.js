@@ -28,10 +28,9 @@ addButton.addEventListener("click", () => {
     // Append div to li
     li.appendChild(div);
 
-    // Append li to task list
-    taskList.appendChild(li);
 
-    // Clear input
+    taskList.appendChild(li);
+    
     inputFromUser.value = "";
   } else {
     alert("Enter a task");
