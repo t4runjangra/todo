@@ -3,31 +3,33 @@ const inputFromUser = document.getElementsByClassName("userinput")[0];
 const taskList = document.getElementsByClassName("tasklist")[0];
 const align = document.getElementsByClassName("align")[0];
 const deleteAll = document.getElementsByClassName("deleteAll")[0];
+
 deleteAll.addEventListener("click", function () {
   const task = document.querySelectorAll(".tasklist li")
-  if (task.length<=2) {
-  task.style.color = "green"
+  if (task.length <= 2) {
+    task.style.color = "green"
   }
-  if (task.length>=2) {
+  if (task.length >= 2) {
     // task.remove()
     task.forEach(task => task.remove());
     // task.style.display = "none"
 
-  // if (confirm("Delete ALL tasks permanently?")) {
-  //   // toggleDeleteAllButton();
-  // }
-}})
+    // if (confirm("Delete ALL tasks permanently?")) {
+    //   // toggleDeleteAllButton();
+    // }
+  }
+})
 inputFromUser.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     addButton.click();
   }
 });
 const list = function deleteAll() {
-  
+
 }
 addButton.addEventListener("click", () => {
   const taskText = inputFromUser.value.trim();
-  
+
   if (taskText !== "") {
     const li = document.createElement("li");
     const div = document.createElement("div");
