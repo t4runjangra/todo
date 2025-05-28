@@ -11,7 +11,7 @@ body {
   user-select: none ;
   background-size: cover;
   background-repeat:repeat;
-  background-image: url(background.png);
+    background-image: url("https://t4runjangra.github.io/todo/background.png");
 }
 header {
   border-radius: 50px;
