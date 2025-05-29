@@ -5,30 +5,33 @@
   margin: 0;
   font-family: "Roboto", Arial, sans-serif;
   list-style: none;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 body {
-  user-select: none ;
+  user-select: none;
   background-size: cover;
-  background-repeat:repeat;
-    background-image: url("https://t4runjangra.github.io/todo/background.png");
+  background-repeat: repeat;
+  background-image: url("https://t4runjangra.github.io/todo/background.png");
 }
 header {
   border-radius: 50px;
   text-shadow: 1px 0px 8px rgba(255, 255, 255, 0.786);
   background-color: rgba(28, 123, 201, 0.445);
+  width: 100vw;
+  /* margin: 0% 5%; */
 }
 .navbar {
-  margin-left: 10%;
+  margin-right: 10%;
   padding: 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.navbar h1{
+.navbar h1 {
   font-family: Arial, sans-serif;
   font-size: x-large;
   font-weight: 900;
+  margin-left: 10%;
 }
 .list ul {
   margin-right: 70%;
@@ -79,6 +82,7 @@ main {
   padding: 15px 0px;
 }
 .todomain input {
+  cursor: text;
   margin-left: 10px;
   width: 47%;
   border: none;
@@ -97,7 +101,7 @@ main {
   margin-right: 10px;
   border: none;
   height: 32px;
-  margin-top:2px;
+  margin-top: 2px;
   box-shadow: 1px 0px 8px;
   padding: 0px 20px;
   color: rgb(2, 1, 1);
@@ -110,15 +114,16 @@ main {
 }
 .task {
   height: 100%;
-  width: 100%;
+  width: 55vw;
   color: red;
   display: flex;
   justify-content: center;
   align-items: center;
+  /* overflow: hidden; */
 }
 .tasklist li {
   color: rgb(0, 0, 0);
-  min-width: 140px;
+  width: 100;
   border-radius: 5px;
   padding: 10px 100px;
   display: flex;
@@ -158,17 +163,84 @@ main {
 .learnjs input[type="checkbox"]:checked::before {
   display: block;
 }
-.learnjs .cross{
+.learnjs .cross {
   border: none;
   background-color: rgba(255, 255, 255, 0);
   position: absolute;
   top: 10px;
   right: 20px;
 }
+.learnjs .cross:hover {
+  transform: scale(1.11);
+}
 
-.deleteAll{
+.deleteAll {
   background-color: rgba(240, 248, 255, 0);
-  border:2px solid rgb(102, 184, 209);
+  border: 2px solid rgb(102, 184, 209);
   border-radius: 10px;
   padding: 10px 8px;
+  box-shadow: 2px 0px 12px #dedfdf74;
 }
+.deleteAll:hover {
+  cursor: pointer;
+  transition: 0.2s ease;
+  transform: scale(1.11);
+}
+
+@media (max-width: 768px), (max-height: 500px) {
+  header {
+    border-radius: 0px;
+    width: 100%;
+    margin: 0px 10px 0 0;
+  }
+  .navbar {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar h1 {
+    font-family: Arial, sans-serif;
+    font-size: x-large;
+    font-weight: 900;
+  }
+  .list ul {
+    margin-right: 70%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .list a {
+    text-decoration: none;
+    color: black;
+  }
+  .list a:hover {
+    color: rgb(255, 255, 255);
+  }
+  .bg{
+    width: 95%;
+    margin-top: -250px;
+  }
+  .tasklist {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .learnjs {
+    color: rgb(0, 0, 0);
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(234, 228, 228, 0.808);
+    margin-bottom: 5px;
+  }
+ p{
+  font-size: smaller;
+  text-align: center;
+ }
+}
+

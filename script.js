@@ -3,20 +3,26 @@ const inputFromUser = document.getElementsByClassName("userinput")[0];
 const taskList = document.getElementsByClassName("tasklist")[0];
 const align = document.getElementsByClassName("align")[0];
 const deleteAll = document.getElementsByClassName("deleteAll")[0];
+
+deleteAll.style.display = "none"
+function toggleDeleteAllButton() {
+  const task = document.querySelectorAll(".tasklist li")
+  if (task.length>2) {
+  deleteAll.style.display = "block"
+  }
+  else{
+    deleteAll.style.display = "none"
+  }
+}
 deleteAll.addEventListener("click", function () {
   const task = document.querySelectorAll(".tasklist li")
-  if (task.length<=2) {
-  task.style.color = "green"
+    
+    if (task.length>0 && confirm("Delete ALL tasks permanently?")) {
+      task.forEach(task => task.remove());
+    toggleDeleteAllButton();
   }
-  if (task.length>=2) {
-    // task.remove()
-    task.forEach(task => task.remove());
-    // task.style.display = "none"
-
-  // if (confirm("Delete ALL tasks permanently?")) {
-  //   // toggleDeleteAllButton();
-  // }
-}})
+})
+  
 inputFromUser.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
     addButton.click();
@@ -43,21 +49,33 @@ addButton.addEventListener("click", () => {
     div.appendChild(p);
     div.appendChild(addCross);
     li.appendChild(div);
-    console.log(addCross);
     taskList.appendChild(li);
+
+
+    checkbox.onclick = function () {
+      if (checkbox.checked) {
+        li.style.textDecoration = "line-through"
+        li.style.backgroundColor =" rgba(124, 133, 140, 0.47)"   
+        li.style.opacity = "0.7"   
+      }
+      else if(!checkbox.checked){
+        li.style.backgroundColor = "rgba(234, 228, 228, 0.808)"
+        li.style.textDecoration = "none" 
+        li.style.opacity = "1"   
+      } }
+    
     addCross.onclick = function () {
       li.remove();
+      toggleDeleteAllButton();
     };
+
     inputFromUser.value = "";
-  } else {
+    toggleDeleteAllButton();
+
+  }
+  else {
     alert("Enter a task");
   }
 });
-// deleteAll.addEventListener("click", () => {
-//  const list = document.createElement("li");
-//   if(list>=2){
-//     deleteAll.style.display = "none"
-//   }else{
-//     taskList.remove();
-//   }
-// })
+
+toggleDeleteAllButton();
