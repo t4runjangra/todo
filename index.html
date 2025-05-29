@@ -2,9 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://t4runjangra.github.io"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://t4runjangra.github.io">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://t4runjangra.github.io/todo/style.css">
     <title>ToDo List</title>
   </head>
   <body>
@@ -13,6 +13,8 @@
         <h1>ToDo</h1>
         <div class="list">
           <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
             <li><a href="https://github.com/t4runjangra">Github</a></li>
           </ul>
         </div>
@@ -26,16 +28,21 @@
             <input class="userinput" type="search" placeholder="Add task" />
             <button class = "addButton">Add</button>
           </div>
-          <div class="over">
           <div class="task">
             <ul class="tasklist">
+              <!-- <li>
+                <div class="learnjs">
+                  <input type="checkbox" name="javascriptCheckbox" id="js" />
+                  <p>Learn javascript</p>
+                  <button class="cross">❌</button>
+                </div>
+              </li> -->
             </ul>
           </div>
-        </div>
+          <button class="deleteAll">❌ Delete All Task </button>
       </div>
-      <button style="margin: auto;" class="deleteAll">❌ Delete All Task </button>
       </div>
     </main>
-    <script src="script.js"></script>
+    <script src="https://t4runjangra.github.io/todo/script.js"></script>
   </body>
 </html>
