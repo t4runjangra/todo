@@ -17,8 +17,10 @@ header {
   border-radius: 50px;
   text-shadow: 1px 0px 8px rgba(255, 255, 255, 0.786);
   background-color: rgba(28, 123, 201, 0.445);
-  width: 100vw;
-  /* margin: 0% 5%; */
+  width: 65vw;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .navbar {
   margin-right: 10%;
@@ -39,21 +41,23 @@ header {
   display: flex;
   justify-content: center;
   gap: 20px;
+  font-weight: 600;
+  font-size: larger;
 }
 .list a {
   text-decoration: none;
   color: black;
 }
 .list a:hover {
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.834);
 }
 main {
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .bg {
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   height: 65%;
@@ -62,14 +66,31 @@ main {
   box-shadow: 1px 0px 8px;
   background-color: rgba(255, 255, 255, 0.149);
 }
+::-webkit-scrollbar {
+  width: 6px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #632e2e00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 .align {
   flex-direction: column;
   display: flex;
   justify-content: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
   align-items: center;
 }
 .align h2 {
-  height: 100%;
   padding: 10px 0px;
   text-shadow: 1px 0px 8px rgba(85, 85, 85, 0.534);
 }
@@ -92,8 +113,6 @@ main {
   color: rgb(255, 255, 255);
   box-shadow: 1px 0px 8px rgba(0, 0, 0, 0.105);
 }
-/* .todomain input::content{
-} */
 .todomain input::placeholder {
   color: white;
 }
@@ -112,25 +131,28 @@ main {
   background-color: rgba(28, 123, 201, 0.555);
   cursor: pointer;
 }
-.task {
-  height: 100%;
-  width: 55vw;
-  color: red;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* overflow: hidden; */
+.over{
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-.tasklist li {
+.task {
+  height: 31vh;
   color: rgb(0, 0, 0);
-  width: 100;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.learnjs {
+  text-overflow: ellipsis;
+  max-width: 80%;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   padding: 10px 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(234, 228, 228, 0.808);
-  margin-bottom: 5px;
+  margin: 5px 5px 10px 10px;
   position: relative;
 }
 
@@ -191,7 +213,7 @@ main {
   header {
     border-radius: 0px;
     width: 100%;
-    margin: 0px 10px 0 0;
+    margin: 0px 10px 0 10;
   }
   .navbar {
     padding: 10px 0;
@@ -218,29 +240,23 @@ main {
   .list a:hover {
     color: rgb(255, 255, 255);
   }
-  .bg{
-    width: 95%;
-    margin-top: -250px;
+  .bg {
+    width: 95vw;
   }
-  .tasklist {
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  .align {
     width: 100%;
   }
   .learnjs {
     color: rgb(0, 0, 0);
-    width: 100%;
     border-radius: 5px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     background-color: rgba(234, 228, 228, 0.808);
     margin-bottom: 5px;
   }
- p{
-  font-size: smaller;
-  text-align: center;
- }
+  p {
+    font-size: smaller;
+    text-align: center;
+  }
 }
-
